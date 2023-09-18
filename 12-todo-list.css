@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content at the top */
+    min-height: 100vh;
+}
+body button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.title {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold; /* Set the font weight to bold */
+    color: #333; /* Set the text color (you can use a color code or a color name) */
+    text-align: center; /* Center-align the title */
+    margin-top: 20px; /* Add top margin for spacing */
+}
+
+
+
+.todo-grid, .todo-input-grid {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+}
+.todo-grid {
+    animation: slideIn 0.5s ease-in-out; /* Adjust the animation duration and timing function as needed */
+    padding: 10px; /* Add padding to create space around the content */
+    background-color: #ffffff; /* Set the background color */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Adjust the initial position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todo-input-grid {
+    margin-bottom: 10px;
+    align-items: stretch;
+}
+
+.add {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px; /* Adjust padding as needed */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.add:hover {
+    background-color: darkgreen; /* Change the color on hover */
+}
+
+.delete {
+    background-color: darkred;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 15px; /* Adjust padding as needed */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.delete:hover {
+    background-color: red; /* Change the color on hover */
+}
+
+.input, .date {
+    font-size: 15px;
+    padding: 6px;
+    border: 1px solid #ccc; /* Add a border to input fields */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+}
+
+/* Add any other styling as needed */
